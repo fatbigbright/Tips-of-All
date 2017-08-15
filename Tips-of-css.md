@@ -10,6 +10,6 @@
    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .table-width { width: 1px; } }
    ```
  2. **案例二**： 关于表格单元格td元素position值设为relative时带来的问题。   
-    **场景描述**： 一个表格单元格td元素，其内有一个span元素，想要让其相对于td位置固定，首先想到的思路就是让td的position值为relative而span的position值为absolute，在chrome浏览器下这样做就足够了，但在IE浏览器下就会发现这样做会带来一个不大不小的副作用，td会将其设定的border覆盖掉。   
-    **实现目标**： 解决上述问题。   
-    **分析和解答**： 解决的方法很简单，将td中的span套进一个div中，将position: relative这一属性值设置在div上而非td本身即可。
+**场景描述**： 一个表格单元格td元素，其内有一个span元素，想要让其相对于td位置固定，首先想到的思路就是让td的position值为relative而span的position值为absolute，在chrome浏览器下这样做就足够了，但在IE浏览器下就会发现这样做会带来一个不大不小的副作用，td会将其设定的border覆盖掉。   
+**实现目标**： 解决上述问题。   
+**分析和解答**： 解决的方法很简单，将td中的span套进一个div中，将position: relative这一属性值设置在div上而非td本身即可。
