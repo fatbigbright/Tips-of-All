@@ -4,4 +4,4 @@
 第二，查看 servername.domain 或 http://servername.domain 默认定向到的站点（比如IIS上还安装了Sharepoint，那这将指向Sharepoint的默认地址），
 在那个站点上（如果没有这样的站点，那应该在根结点上）创建URL Rewrite规则
 （需要在[这里](https://www.iis.net/downloads/microsoft/url-rewrite)下载相应的组件)，规则配置中的重点有：Match URL为*，Action Type为Redirect，
-Action中的Redirect URL为https://{HTTP_POST}{REQUEST_URI}，Redirect type为302。
+Action中的Redirect URL为https://{HTTP_HOST}{REQUEST_URI}，Redirect type为302。
