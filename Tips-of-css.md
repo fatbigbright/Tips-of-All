@@ -13,3 +13,8 @@
 **场景描述**： 一个表格单元格td元素，其内有一个span元素，想要让其相对于td位置固定，首先想到的思路就是让td的position值为relative而span的position值为absolute，在chrome浏览器下这样做就足够了，但在IE浏览器下就会发现这样做会带来一个不大不小的副作用，td会将其设定的border覆盖掉。   
 **实现目标**： 解决上述问题。   
 **分析和解答**： 解决的方法很简单，将td中的span套进一个div中，将position: relative这一属性值设置在div上而非td本身即可。
+
+3. **案例三**： 关于glyphicon图标的使用。   
+**场景描述**： 使用bootstrap作为基本样式表，后又全局设置了font-family为微软雅黑，发现所有glyphicon图标都变成了空方框。   
+**实现目标**： 解决上述问题。   
+**分析和解答**： glyphicon图标实际需要加载bootstrap的相关字体文件并设置font-family给glyphicon类，再次之后再全局设置其他字体会破坏对图标的设置。要解决，就要把.glyphicon从全局字体设置里排除出去，css的selector可以从星号`*`改为`not:(.glyphicon)`。
